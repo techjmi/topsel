@@ -54,13 +54,6 @@ const SignIn= async(req,res)=>{
             return res.status(400).json({ message: "Invalid email or password" });
           }
           const token = generateToken(user._id);
-        //   console.log('the token is',token)
-        //   res.json({message:'signin successfull', user})
-          // res.status(200).json({
-          //   success: true,
-          //   message: "User Logged in success",
-          //   token,
-          // });
           res.status(200).json({
             success: true,
             message: "User Logged in successfully",
